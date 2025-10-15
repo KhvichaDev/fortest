@@ -1,14 +1,14 @@
 (function() {
     'use strict';
     
-    // დავრწმუნდეთ, რომ გლობალური namespace არსებობს
+    // áááá á¬áá£áááá, á áá ááááááá£á á namespace áá á¡ááááá¡
     window.GeminiPowerUp = window.GeminiPowerUp || {};
     
-    // ამ მოდულისთვის საჭირო ცვლადები
+    // áá áááá£ááá¡áááá¡ á¡áá­áá á áªááááááá
     let promptsPanel, promptsList, promptModal, activeModalPrompt = null;
     let isUpdatingLinks = false; // Lock to prevent link/unlink race conditions
 
-    // Storage Helper ფუნქციები
+    // Storage Helper á¤á£áá¥áªáááá
     const getPrompts = async () => {
         try {
             if (chrome.runtime?.id && window.GeminiPowerUp.getStorage) {
@@ -27,11 +27,11 @@
         } catch (error) { console.warn("Could not save prompts, context likely invalidated.", error); }
     };
 
-    // UI-ს შექმნის ფუნქცია
+    // UI-á¡ á¨áá¥áááá¡ á¤á£áá¥áªáá
     function initializePromptManagerUI() {
         if (document.querySelector('.prompts-panel')) return;
 
-        // --- პრომპტების პანელის შექმნა ---
+        // --- áá áááá¢áááá¡ ááááááá¡ á¨áá¥ááá ---
         promptsPanel = document.createElement('div');
         promptsPanel.className = 'prompts-panel';
         promptsPanel.innerHTML = `
@@ -71,7 +71,7 @@
         promptsList = promptsPanel.querySelector('.prompts-list');
         window.GeminiPowerUp.promptsPanel = promptsPanel;
 
-        // --- მოდალური ფანჯრის შექმნა ---
+        // --- áááááá£á á á¤ááá¯á áá¡ á¨áá¥ááá ---
         promptModal = document.createElement('div');
         promptModal.className = 'prompt-modal-overlay';
         promptModal.innerHTML = `<div class="prompt-modal-container"></div>`;
