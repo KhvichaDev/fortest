@@ -17,16 +17,16 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Adds the banner's CSS styles to the website's head section.
  */
-function sbb_enqueue_banner_styles() {
+function sbb_enqueue_banner_styles()  { 
 	?>
 	<style type="text/css">
-		.sbb-simple-banner {
+				.sbb-simple-banner {
 			position: fixed;
 			bottom: 0;
 			left: 0;
 			width: 100%;
 			padding: 16px 0;
-			background-color: #0073e6; /* Bright Blue */
+			background-color: #000000; /* Black */
 			color: #ffffff; /* White Text */
 			text-align: center;
 			z-index: 10000;
@@ -52,8 +52,8 @@ function sbb_render_banner_html() {
 	// You can change the '#' to any URL you want.
 	$see_more_url = '#'; 
 	?>
-	<div class="sbb-simple-banner">
-		<a href="<?php echo esc_url( $see_more_url ); ?>">see more</a>
+		<div class="sbb-simple-banner">
+		<a href="<?php echo esc_url( $see_more_url ); ?>">go here</a>
 	</div>
 	<?php
 }
